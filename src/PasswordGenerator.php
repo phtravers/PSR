@@ -27,14 +27,12 @@ class PasswordGenerator
     public static function generate($length = 10, $number)
     {
 
-        if(!in_array($number, array(self::PASSWORD_EASY, self::PASSWORD_MEDIUM, self::PASSWORD_HARD)))
-        {
+        if (!in_array($number, array(self::PASSWORD_EASY, self::PASSWORD_MEDIUM, self::PASSWORD_HARD))) {
             throw new \Exception('invalid strength');
         }
 
 
-        switch($number)
-        {
+        switch ($number) {
             case self::PASSWORD_EASY:
                $string = self::PASSWORD_CHAR_STRENGTH_EASY;
                break;
@@ -50,9 +48,8 @@ class PasswordGenerator
 
         $password = '';
 
-        for($i = 0; $i <= $length; $i++)
-        {
-            $password .= mb_substr($string, mt_rand(0, strlen($string)-1), 1);
+        for ($i = 0; $i < $length; $i++) {
+            $password .= mb_substr($string, mt_rand(0, mb_strlen($string)-1), 1);
         }
 
         return $password;
