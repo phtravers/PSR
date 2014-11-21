@@ -9,6 +9,7 @@
 
 namespace OKLM\StringGenerator;
 
+
 class PasswordGenerator
 {
     const PASSWORD_EASY     = 0;

@@ -13,6 +13,7 @@ require __DIR__.'/vendor/autoload.php';
 //echo $slugify->slugify('Mé rès huhi');
 
 
-echo \OKLM\StringGenerator\PasswordGenerator::generate(18, \OKLM\StringGenerator\PasswordGenerator::PASSWORD_EASY);
-//phpinfo();
+// exo1 : echo \OKLM\StringGenerator\PasswordGenerator::generate(18, \OKLM\StringGenerator\PasswordGenerator::PASSWORD_EASY);
+
+echo \OKLM\StringGenerator\LoremIpsum::generate(\OKLM\StringGenerator\LoremIpsum::ALPHABET);
 
